@@ -1,0 +1,42 @@
+/* CSS Variables */
+:root {
+  --pink: #7456F1;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* .bg,
+.button {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  
+} */
+
+
+.bg {
+  animation: pulse 1.2s ease infinite;
+  background: var(--pink);
+}
+
+.button {
+  background: var(--pink);
+}
+
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

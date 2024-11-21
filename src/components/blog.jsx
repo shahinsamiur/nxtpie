@@ -1,0 +1,53 @@
+import React from 'react'
+import PulseButton from '../button'
+// import Navbar from '../nav'
+import BlogComponents from './Blog_components'
+export default function Blog() {
+
+  const featuresData = [
+    {
+      "title": "Enhanced Features and New Release Date",
+      "description": "We wanted to update you on our app’s launch timeline. To ensure the best experience poss......."
+
+    },
+    {
+      "title": "Enhanced Features and New Release Date",
+      "description": "We wanted to update you on our app’s launch timeline. To ensure the best experience poss......."
+
+    }, {
+      "title": "Enhanced Features and New Release Date",
+      "description": "We wanted to update you on our app’s launch timeline. To ensure the best experience poss......."
+
+    },
+  ]
+
+
+
+  return (
+    <>
+
+      <div className='flex flex-col pt-[5vh] items-center gap-[3vh] w-screen h-[auto] bg-[#000101] font-body_font text-white overflow-auto pb-[10vh]'>
+
+
+        <h1 className='w-[70vw] text-[7vw]  font-thin font-heading leading-snug lg:text-[1.5vw] lg:w-[50vw] lg:leading-tight 
+            '>Progress Updates
+        </h1>
+
+
+
+        <div className='flex flex-col  items-center gap-[2vh] '>
+
+          {featuresData.map((feature, index) => (
+            <BlogComponents key={index} title={feature.title} description={feature.description} />
+          ))}
+
+        </div>
+
+
+
+
+        <PulseButton />
+      </div>
+    </>
+  )
+}

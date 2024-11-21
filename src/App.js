@@ -1,25 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Comming from "./components/comming"
+import Navbar from "./nav";
+import Home from "./components/home"
+import Features from "./components/features"
+import PulseButton from "./button";
+import Blog from "./components/blog"
+import Faq from "./components/faq";
+import Fotter from "./components/fotter";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" w-[100vw]  h-auto overflow-auto bg-[#000101] text-white">
+      <Navbar />
+      <div className=" w-full h-screen   text-black text-2xl font-bold pt-[10vh]">
+        <div className='w-full   bg-[#000101] font-padyakke text-white overflow-hidden'>
+          <div className='w-full h-screen pt-[20vh] md:pt-[8vw]  justify-center '>
+            {/* design */}
+            <div className='flex flex-row justify-center  lg:w-screen lg:h-auto'>
+              <img src='./cy.svg' alt='err' className='w-[70vw] h-[70vw]  lg:w-[30vw] lg:h-[20vw] ' />
+              {/* <div class=" absolute blur-3xl bg-[#2B2B8A] h-[30vw] w-[30vw]  lg:w-[30vw] lg:h-[5vw] lg:top-[30vh]"></div> */}
+            </div>
+
+
+            <div className='flex flex-col justify-center gap-[1vh] relative font-extralight -top-[8vh] lg:z-40'>
+              <h1 className='text-center text-[7vw] tracking-[0.5vw] lg:text-[3vw] lg:tracking-[1.5vw]'>comming soon </h1>
+              <p className='text-center text-[3vw] tracking-[2.5vw] lg:text-[2vw] lg:tracking-[3.5vw]'>Nxtpie</p>
+            </div>
+
+
+
+            {/* coundown */}
+            <div className=' flex flex-col justify-center items-center gap-[2vh] '>
+              <div className=' flex flex-row justify-center items-center gap-[0.5vw] '>
+                <h1 className='text-[10vw] font-postnobills lg:text-[3vw]'>27</h1>
+                <p className='text-[3vw] font-thin lg:text-[1vw]'>Days Left</p>
+              </div>
+              <p className='text-[3vw] font-padyakke w-[70vw] text-center leading-tight font-thin lg:text-[1vw]'>Join the Revolution in Education—Sign Up Early!</p>
+              <PulseButton />
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="w-full h-[100vh] bg-[#000101]">
+          <Home />
+          <Features />
+          < Blog />
+          <Faq />
+          < Fotter />
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   );
-}
-
+};
 export default App;
