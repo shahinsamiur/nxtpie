@@ -26,10 +26,10 @@ export default function Blog() {
   return (
     <>
 
-      <div className='flex flex-col pt-[5vh] items-center gap-[3vh] w-screen h-[auto] bg-[#000101] font-body_font text-white overflow-auto pb-[10vh]'>
+      <div id='blog' className='flex flex-col pt-[5vh] lg:py-[20vh] items-center gap-[3vh] w-screen h-[auto] bg-[#000101] font-body_font text-white overflow-auto pb-[10vh]'>
 
 
-        <h1 className='w-[70vw] text-[7vw]  font-thin font-heading leading-snug lg:text-[1.5vw] lg:w-[50vw] lg:leading-tight 
+        <h1 className='w-[70vw] text-[7vw]  font-thin font-heading leading-snug lg:text-[2vw] lg:w-full lg:text-center lg:leading-tight 
             '>Progress Updates
         </h1>
 

@@ -57,12 +57,12 @@ export default function faq() {
 
 
   return (
-    <div className='w-screen h-auto px-[7vw] flex flex-col gap-[8vh] lg:px-[7vw]    overflow-auto'>
+    <div id='faq' className='w-screen  h-auto px-[7vw] flex flex-col gap-[8vh] lg:gap-[4vh] lg:justify-center lg:items-center lg:px-[7vw]    overflow-auto'>
       <div>
-      <h1 className="font-normal font-heading text-white text-[3.5vw] lg:text-[1.5vw]">Frequently Asked Questions :</h1>
+      <h1 className="font-thin font-heading text-center text-white text-[3.5vw] lg:text-[2vw]">Frequently Asked Questions :</h1>
       </div>
 
-      <div className='w-full h-auto pt-[5vw] text-left  flex flex-col gap-[4vh] md:gap-[5vh] overflow-hidden lg:gap-[2vh] lg:grid  lg:grid-flow-row lg:grid-cols-2 '>
+      <div className='w-full lg:w-[70vw] h-auto pt-[5vw] text-left  flex flex-col gap-[4vh] md:gap-[5vh] overflow-hidden lg:gap-[4vh] lg:grid lg:text-[3vw]  lg:grid-flow-row lg:grid-cols-2 '>
       {data.map((data, index) => (
             <AccordionComponent key={index} title={data.question} description={data.answer} />
           ))}

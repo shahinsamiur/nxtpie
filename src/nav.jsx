@@ -9,24 +9,31 @@ const Navbar = () => {
       <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold">MyApp</h1>
+          <div className="flex  items-center ">
+            <img src="./logo.svg" alt="error" className="w-[15vw] lg:w-[5vw]" />
+            <div className="h-[8vh]  flex  items-end">
+              <h3 className="text-[white] text-[4vw] font-thin font-body_font lg:text-[1.5vw]">Nxtpie</h3>
+            </div>
+
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-[10vw]">
-            <a href="#ss" className="hover:text-[#7456F1] text-[1vw]">
+            <a href="#home" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
               Home
             </a>
-            <a href="#ss" className="hover:text-[#7456F1] text-[1vw]">
-              About
+            <a href="#features" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
+            Features
             </a>
-            <a href="#ss" className="hover:text-[#7456F1] text-[1vw]">
-              Services
+
+            <a href="#blog" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
+            Blog
             </a>
-            <a href="#ss" className="hover:text-[#7456F1] text-[1vw]">
-              Contact
+
+            <a href="#faq" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
+            FAQ
             </a>
+         
           </div>
 
           {/* Hamburger Icon */}
@@ -65,32 +72,37 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className=" relative top-0 left-0 w-full h-[40vh] bg-[#151515] z-50">
+        <div className=" relative flex flex-col  items-center justify-center top-0 left-0 w-full h-[40vh] bg-[#000101] z-50">
           <div className="px-4 space-y-2 ">
             <a
-              href="#aa"
-              className="block px-3 py-2 rounded-md text-base font-medium hover:text-[#7456F1]"
+              href="#home"
+              className="block px-3 py-2 rounded-md text-base font-heading font-thin hover:text-[#7456F1]"
             >
               Home
             </a>
             <a
-              href="#aa"
-              className="block px-3 py-2 rounded-md text-base font-medium hover:text-[#7456F1]"
+              href="#features"
+              className="block px-3 py-2 rounded-md text-base font-heading font-thin hover:text-[#7456F1]"
             >
-              About
+              Features
             </a>
+
+
             <a
-              href="#aa"
-              className="block px-3 py-2 rounded-md text-base font-medium hover:text-[#7456F1]"
+              href="#blog"
+              className="block px-3 py-2 rounded-md text-base font-heading font-thin hover:text-[#7456F1]"
             >
-              Services
+              Blog
             </a>
+
+
             <a
-              href="#aa"
-              className="block px-3 py-2 rounded-md text-base font-medium hover:text-[#7456F1]"
+              href="#faq"
+              className="block px-3 py-2 rounded-md text-base font-heading font-thin hover:text-[#7456F1]"
             >
-              Contact
+              FAQ
             </a>
+      
           </div>
         </div>
       )}

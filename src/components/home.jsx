@@ -5,7 +5,7 @@ export default function home() {
     return (
         <>
         
-        <div className='flex flex-col justify-center items-center gap-[3vh] w-screen h-screen bg-[#000101] font-heading font-normal text-white overflow-auto'>
+        <div id='home' className='flex flex-col justify-center items-center gap-[3vh] w-screen h-screen bg-[#000101] font-heading font-normal text-white overflow-auto'>
            
            
             <h1 className='w-[70vw] text-[4vw]  font-heading font-normal leading-snug lg:text-[2.7vw] lg:w-[50vw] lg:leading-tight '>LiLy: Revolutionizing Learning with AI-Powered Teaching</h1>
