@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,19 +10,23 @@ const Navbar = () => {
       <div className="relative z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+          <Link to={"/"}>  
           <div className="flex  items-center ">
             <img src="./logo.svg" alt="error" className="w-[15vw] lg:w-[5vw]" />
             <div className="h-[8vh]  flex  items-end">
-              <h3 className="text-[white] text-[4vw] font-thin font-body_font lg:text-[1.5vw]">Nxtpie</h3>
+              <h3 className="text-[white] text-[4vw] font-light font-body_font lg:text-[1.5vw]">Nxtpie</h3>
             </div>
 
           </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-[10vw]">
+            {/* <Link to={"#home"}> */}
             <a href="#home" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
               Home
             </a>
+            {/* </Link> */}
             <a href="#features" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
             Features
             </a>

@@ -18,7 +18,7 @@ const App = () => {
 
 
   return (
-    <div className=" w-[100vw]  h-auto overflow-auto bg-[#000101] text-white">
+    <div className="scroll-smooth w-[100vw]  h-auto overflow-auto bg-[#000101] text-white">
       <Navbar />
       <div className=" w-full h-screen   text-black text-2xl font-bold pt-[10vh]">
   

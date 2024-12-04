@@ -59,7 +59,7 @@ export default function faq() {
   return (
     <div id='faq' className='w-screen  h-auto px-[7vw] flex flex-col gap-[8vh] lg:gap-[4vh] lg:justify-center lg:items-center lg:px-[7vw]    overflow-auto'>
       <div>
-      <h1 className="font-thin font-heading text-center text-white text-[3.5vw] lg:text-[2vw]">Frequently Asked Questions :</h1>
+      <h1 className="font-light font-heading text-center text-white text-[3.5vw] lg:text-[2vw]">Frequently Asked Questions :</h1>
       </div>
 
       <div className='w-full lg:w-[70vw] h-auto pt-[5vw] text-left  flex flex-col gap-[4vh] md:gap-[5vh] overflow-hidden lg:gap-[4vh] lg:grid lg:text-[3vw]  lg:grid-flow-row lg:grid-cols-2 '>

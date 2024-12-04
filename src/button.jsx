@@ -1,9 +1,13 @@
 import React from "react";
 import "./button.css";
+import { Link } from "react-router-dom";
 
 const PulseButton = () => {
   return (
     <div className=" w-screen h-auto flex justify-center">
+      <Link to="/signup">
+
+     
       {/* <div className="bg relative w-[30vw] h-[10vw] rounded-xl
       lg:w-[10vw]
       lg:h-[3vw]
@@ -17,6 +21,7 @@ const PulseButton = () => {
       ">
         Pre Signup now
       </div>
+      </Link>
     </div>
   );
 };

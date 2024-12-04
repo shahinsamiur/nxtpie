@@ -9,7 +9,7 @@ export default function home() {
            
            
             <h1 className='w-[70vw] text-[4vw]  font-heading font-normal leading-snug lg:text-[2.7vw] lg:w-[50vw] lg:leading-tight '>LiLy: Revolutionizing Learning with AI-Powered Teaching</h1>
-            <p className='w-[70vw] text-[3.8vw] font-thin font-body_font  leading-[5vh] lg:text-[1.5vw] lg:w-[50vw]'>Elevate your learning with an AI teacher designed for complete understanding.
+            <p className='w-[70vw] text-[3.8vw] font-light font-body_font  leading-[5vh] lg:text-[1.5vw] lg:w-[50vw]'>Elevate your learning with an AI teacher designed for complete understanding.
                 Through real-time voice guidance, interactive coding practice, and engaging presentations,
                 our AI provides a comprehensive approach to mastering new skills.
                 If a topic isn’t clear,
