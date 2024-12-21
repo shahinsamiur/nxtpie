@@ -10,16 +10,16 @@ export default function fotter() {
     </span>
     <ul className="flex flex-wrap justify-center items-center mt-3 lg:gap-[7vw]  font-thin  text-[3vw] sm:mt-0">
         <li>
-            <a href="#s" className="hover:underline text-[2.5vw] md:text-[2vw] lg:text-[1vw] me-4 md:me-6">About</a>
+            <a href="#home" className="hover:underline text-[2.5vw] md:text-[2vw] lg:text-[1vw] me-4 md:me-6">Home</a>
         </li>
         <li>
-            <a href="#s" className="hover:underline text-[2.5vw] md:text-[2vw] lg:text-[1vw] me-4 md:me-6">Privacy Policy</a>
+            <a href="#features" className="hover:underline text-[2.5vw] md:text-[2vw] lg:text-[1vw] me-4 md:me-6">Features</a>
         </li>
         <li>
-            <a href="#s" className="hover:underline text-[2.5vw] md:text-[2vw] lg:text-[1vw] me-4 md:me-6">Licensing</a>
+            <a href="#blog" className="hover:underline text-[2.5vw] md:text-[2vw] lg:text-[1vw] me-4 md:me-6">Blog</a>
         </li>
         <li>
-            <a href="#s" className="hover:underline text-[2.5vw] lg:text-[1vw]">Contact</a>
+            <a href="#faq" className="hover:underline text-[2.5vw] lg:text-[1vw]">FAQ</a>
         </li>
     </ul>
     </div>

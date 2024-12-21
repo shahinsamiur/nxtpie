@@ -13,7 +13,7 @@ const PulseButton = () => {
       lg:h-[3vw]
       lg:text-[1vw]
       "></div> */}
-      <div className="button cursor-pointer relative w-[30vw] h-[10vw] text-[4vw] flex justify-center items-center font-postnobills rounded-lg 
+      <div className="button bg-secondary cursor-pointer relative w-[30vw] h-[10vw] text-[4vw] flex justify-center items-center font-postnobills rounded-lg 
       
       lg:w-[10vw]
       lg:h-[3vw]

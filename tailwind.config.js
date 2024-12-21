@@ -10,6 +10,9 @@ module.exports = {
         postnobills: ['"Post No Bills Colombo"', 'sans-serif'],
         body_font: ['"Lato"', 'sans-serif']
       },
+      colors: {
+        secondary:'#00BAFF'
+      }
     },
   },
   plugins: [],

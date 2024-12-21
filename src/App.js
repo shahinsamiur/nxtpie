@@ -11,7 +11,7 @@ import { useLayoutEffect,useState } from "react";
 const App = () => {
   const [daysLeft, setdaysLeft] = useState(null)
   useLayoutEffect(() => {
-    setdaysLeft(daysLeftFromToday("29/12/2024")) // DD/MM/YYYY
+    setdaysLeft(daysLeftFromToday("20/1/2025")) // DD/MM/YYYY
     
 
   }, [])
