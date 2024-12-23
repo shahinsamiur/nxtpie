@@ -34,9 +34,9 @@ const BlogDetails = () => {
 
   return (
     <div className="p-6 h-screen bg-[#000101] flex flex-col items-center justify-center  text-white">
-      <h2 className="text-[6vw] md:text-[5vw] lg:text-[3vw] text-secondary w-[80%] font-heading mb-4">{blog.title}</h2>
+      <h2 className="text-[6vw] md:text-[5vw] lg:text-[3vw] text-[#7456F1] w-[80%] font-heading mb-4">{blog.title}</h2>
       <p className="text-[4vw] md:text-[3vw] lg:text-[2vw] lg:leading-[3vw] md:leading-[4vw] leading-[8vw] flex-1 w-[80%]">{blog.description}</p>
-      <Link to="/" className="bg-secondary w-[70%] md:w-[50%] h-[8vw] md:h-[5vw] lg:w-[30%] lg:h-[3vw]  rounded-md flex items-center justify-center font-body_font">
+      <Link to="/" className="bg-[#7456F1] w-[70%] md:w-[50%] h-[8vw] md:h-[5vw] lg:w-[30%] lg:h-[3vw]  rounded-md flex items-center justify-center font-body_font">
       <button >Back</button>
       </Link>
     </div>

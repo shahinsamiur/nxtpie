@@ -23,9 +23,9 @@ export default function comming({daysLeft}) {
         <div className=' flex flex-col justify-center items-center gap-[2vh] '>
           <div className=' flex flex-row justify-center items-center gap-[0.5vw] '>
             <h1 className='text-[10vw] font-postnobills lg:text-[3vw]'>{daysLeft}</h1>
-            <p className='text-[3vw] font-thin lg:text-[1vw]'>Days Left</p>
+            <p className='text-[3vw] font-normal lg:text-[1vw]'>Days Left</p>
           </div>
-          <p className='text-[3vw] font-padyakke w-[70vw] text-center leading-tight font-thin lg:text-[1vw]'>Join the Revolution in Education—Sign Up Early!</p>
+          <p className='text-[3vw] font-padyakke w-[70vw] text-center leading-tight font-normal lg:text-[1vw]'>Let's make the Revolution with AI in Education—Sign Up Early!</p>
           <PulseButton />
         </div>
 
