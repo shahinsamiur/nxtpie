@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SignupForm from './components/signUp';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import {BlogDetails} from "./components/blogPage"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -16,6 +16,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="*" element={<App />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>

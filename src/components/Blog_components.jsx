@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../asset/logo_black_with_bg.svg';
 export default function Blog_components({ title, description }) {
   return (
-    <div className="flex flex-row gap-[3%] w-[90vw] h-[15vh] lg:h-[18vh] lg:gap-[5%] cursor-pointer rounded-lg bg-[#151515]/50 font-padyakke font-thin p-[1vw] lg:w-[70vw] ">
+    <div className="flex flex-row gap-[3%] w-[90vw] h-[15vh] lg:h-[auto] lg:gap-[5%] cursor-pointer rounded-lg bg-[#151515]/50 font-padyakke  p-[1vw] lg:w-[70vw] ">
       {/* <div
         className="w-[3.9rem] h-[3.5rem] lg:w-[5.3rem] lg:h-auto  overflow-hidden  rounded-md border-2"
         style={{ backgroundImage: `url(${logo})`,

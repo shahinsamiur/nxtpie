@@ -1,25 +1,17 @@
 import React from 'react'
 import PulseButton from '../button'
-// import Navbar from '../nav'
-import BlogComponents from './Blog_components'
+import { Link } from "react-router-dom";
+import BlogDetails from './Blog_components'
 export default function Blog() {
 
   const featuresData = [
     {
-      "title": "Enhanced Features and New Release Date",
-      "description": "We wanted to update you on our app’s launch timeline. To ensure the best experience poss......."
-
-    },
-    {
-      "title": "Enhanced Features and New Release Date",
-      "description": "We wanted to update you on our app’s launch timeline. To ensure the best experience poss......."
-
-    }, {
-      "title": "Enhanced Features and New Release Date",
-      "description": "We wanted to update you on our app’s launch timeline. To ensure the best experience poss......."
-
-    },
-  ]
+      id: 1,
+      title: "Enhanced Features and New Release Date",
+      description: "We wanted to update you on our app’s launch timeline. To ensure the best experience poss.......",
+    }
+  ];
+  
 
 
 
@@ -29,7 +21,7 @@ export default function Blog() {
       <div id='blog' className='flex flex-col pt-[5vh] lg:py-[20vh] items-center gap-[3vh] w-screen h-[auto] bg-[#000101] font-body_font text-white overflow-auto pb-[10vh]'>
 
 
-        <h1 className='w-[70vw] text-[7vw]  font-thin font-heading leading-snug lg:text-[2vw] lg:w-full lg:text-center lg:leading-tight 
+        <h1 className='w-[70vw] text-[7vw]   font-heading leading-snug lg:text-[2vw] lg:w-full lg:text-center lg:leading-tight 
             '>Progress Updates
         </h1>
 
@@ -38,7 +30,10 @@ export default function Blog() {
         <div className='flex flex-col  items-center gap-[2vh] '>
 
           {featuresData.map((feature, index) => (
-            <BlogComponents key={index} title={feature.title} description={feature.description} />
+            <Link
+              to={`/blog/${feature.id}`}>
+              <BlogDetails key={index} title={feature.title} description={feature.description} />
+            </Link>
           ))}
 
         </div>

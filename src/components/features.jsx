@@ -2,47 +2,48 @@ import React from 'react';
 import FeaturesCom from './features_com';
 
 const featuresData = [
-  { header: "Real-Time Voice Guidance" ,
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
+  { 
+    header: "Real-Time Voice Guidance",
+    description: "Receive instant voice instructions and answers to your queries, making every step of the learning process smooth and interactive."
   },
-  { header: "Immediate Feedback & Progress Tracking",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
-  { header: "Hands-On Coding with Feedback" ,
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
+  { 
+    header: "Immediate Feedback & Progress Tracking",
+    description: "Track your progress and get real-time feedback to improve your understanding and skills efficiently."
   },
-  { header: "Learn Anytime, Anywhere",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
-  { header: "Engaging Visual Presentations" ,
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
+  { 
+    header: "Hands-On Coding with Feedback",
+    description: "Write and test code directly, with immediate feedback to help you correct mistakes and learn effectively."
   },
-  { header: "Skill Assessments",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
-  { header: "Multiple Examples for Clarity",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
-  { header: "Voice Command Navigation",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
-  { header: "Customized Learning Paths",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
-  { header: "Personalized Support",
-    description: "Get instant voice support to guide you through each lesson, making learning feel natural and interactive."
-
-   },
+  { 
+    header: "Learn Anytime, Anywhere",
+    description: "Access lessons and resources on-demand, so you can learn at your own pace, whenever and wherever it suits you."
+  },
+  { 
+    header: "Engaging Visual Presentations",
+    description: "Experience dynamic slides and visuals that simplify complex concepts and make learning enjoyable."
+  },
+  { 
+    header: "Skill Assessments",
+    description: "Evaluate your knowledge with quizzes and tasks tailored to test and strengthen your skills."
+  },
+  { 
+    header: "Multiple Examples for Clarity",
+    description: "Benefit from various examples and case studies to ensure complete understanding of each topic."
+  },
+  { 
+    header: "Voice Command Navigation",
+    description: "Control your learning journey using voice commands, keeping the experience hands-free and intuitive."
+  },
+  { 
+    header: "Customized Learning Paths",
+    description: "Follow a personalized curriculum designed to suit your unique learning goals and preferences."
+  },
+  { 
+    header: "Personalized Support",
+    description: "Receive one-on-one assistance tailored to your needs, ensuring a seamless and efficient learning experience."
+  },
 ];
+
 
 export default function Features() {
   return (
