@@ -1,21 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../nav';
 import axios from 'axios';
+
 const SignupForm = () => {
+  var response
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
   });
 
-  const [errors, setErrors] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-  });
-
-  const [isLoginState,setisLoginState]=useState(false)
-
+  const [error, setError] = useState('');
+  const [isLoginState, setisLoginState] = useState(false);
 
   const validateName = (name) => /^[A-Za-z]+$/.test(name); // Only letters allowed
   const validateEmail = (email) =>
@@ -24,58 +20,59 @@ const SignupForm = () => {
   const handleInputChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
-    setErrors({ ...errors, [id]: '' }); // Clear error on input change
+    setError(''); // Clear error on input change
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newErrors = {};
-  
+
     // Validate first name
     if (!formData.firstName) {
-      newErrors.firstName = 'First name is required.';
+      setError('**First name is required.**');
+      return;
     } else if (!validateName(formData.firstName)) {
-      newErrors.firstName = 'First name must contain only letters.';
-    }
-  
-    // Validate last name
-    if (!formData.lastName) {
-      newErrors.lastName = 'Last name is required.';
-    } else if (!validateName(formData.lastName)) {
-      newErrors.lastName = 'Last name must contain only letters.';
-    }
-  
-    // Validate email
-    if (!formData.email) {
-      newErrors.email = 'Email is required.';
-    } else if (!validateEmail(formData.email)) {
-      newErrors.email = 'Please enter a valid email address.';
-    }
-  
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors); // Update errors if validation fails
+      setError('**First name must contain only letters.**');
       return;
     }
-  
-    try {
 
-      setisLoginState(true)
+    // Validate last name
+    if (!formData.lastName) {
+      setError('**Last name is required.**');
+      return;
+    } else if (!validateName(formData.lastName)) {
+      setError('**Last name must contain only letters.**');
+      return;
+    }
+
+    // Validate email
+    if (!formData.email) {
+      setError('**Email is required.**');
+      return;
+    } else if (!validateEmail(formData.email)) {
+      setError('**Please enter a valid email address.**');
+      return;
+    }
+
+    try {
+      setisLoginState(true);
       // Send form data to the server
-      const response = await axios.post('http://localhost:5000/signup', formData);
-  
+       response = await axios.post('http://localhost:5000/signup', formData);
+
       // Handle success (e.g., show a success message or redirect)
-      console.log('Server Response:', response.data);
-  
+    if(response.status===200){
       // Reset form
       setFormData({ firstName: '', lastName: '', email: '' });
-      setErrors({});
-      setisLoginState(false)
+      setError('');
+      setisLoginState(false);
+    }else{
+      setError(`**${response.data}**`);
+      setisLoginState(false);
+    }
+
     } catch (error) {
-      // Handle error (e.g., server issues or validation errors from the backend)
-      console.error('Error submitting form:', error.response?.data || error.message);
+      setError(`**${response.data}**`);
     }
   };
-  
 
   return (
     <div className="flex flex-col gap-[20vh] lg:gap-[15vh] items-center min-h-screen bg-[#000101]">
@@ -87,9 +84,16 @@ const SignupForm = () => {
         onSubmit={handleSubmit}
         className="lg:bg-[#121212] shadow-md font-body_font rounded px-8 py-6 w-full max-w-md"
       >
-        <h2 className="text-2xl font-bold font-heading text-[#7456F1] text-center mb-6">
+        <h2 className="text-2xl font-bold font-heading text-[#7456F1] text-center mb-2">
           Join Us
         </h2>
+
+        {/* Error Message */}
+        {error && (
+          <div className="mb-4 text-red-500 text-sm font-heading text-center">
+            {error}
+          </div>
+        )}
 
         {/* First Name */}
         <div className="mb-4">
@@ -104,16 +108,9 @@ const SignupForm = () => {
             id="firstName"
             value={formData.firstName}
             onChange={handleInputChange}
-            className={`w-full px-3 py-1 border ${
-              errors.firstName ? 'border-red-500' : 'border-gray-700'
-            } bg-inherit rounded-md text-gray-700 focus:outline-none focus:ring-2 ${
-              errors.firstName ? 'focus:ring-red-500' : 'focus:ring-[#7456F1]'
-            }`}
+            className="w-full px-3 py-1 border border-gray-700 bg-inherit rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#7456F1]"
             placeholder="Enter your first name"
           />
-          {errors.firstName && (
-            <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
-          )}
         </div>
 
         {/* Last Name */}
@@ -129,16 +126,9 @@ const SignupForm = () => {
             id="lastName"
             value={formData.lastName}
             onChange={handleInputChange}
-            className={`w-full px-3 py-1 border ${
-              errors.lastName ? 'border-red-500' : 'border-gray-700'
-            } bg-inherit rounded-md text-gray-700 focus:outline-none focus:ring-2 ${
-              errors.lastName ? 'focus:ring-red-500' : 'focus:ring-[#7456F1]'
-            }`}
+            className="w-full px-3 py-1 border border-gray-700 bg-inherit rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#7456F1]"
             placeholder="Enter your last name"
           />
-          {errors.lastName && (
-            <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
-          )}
         </div>
 
         {/* Email */}
@@ -154,34 +144,18 @@ const SignupForm = () => {
             id="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`w-full px-3 py-1 border ${
-              errors.email ? 'border-red-500' : 'border-gray-700'
-            } bg-inherit rounded-md text-gray-700 focus:outline-none focus:ring-2 ${
-              errors.email ? 'focus:ring-red-500' : 'focus:ring-[#7456F1]'
-            }`}
+            className="w-full px-3 py-1 border border-gray-700 bg-inherit rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#7456F1]"
             placeholder="Enter your email"
           />
-          {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-          )}
         </div>
 
         {/* Submit Button */}
-
-        {isLoginState?   <button
+        <button
           type="submit"
           className="w-full bg-[#7456F1] text-[5vw] lg:text-[1.5vw] font-postnobills text-white py-1 px-2 rounded-md"
         >
-          
-          Please wait
-        </button>:<button
-          type="submit"
-          className="w-full bg-[#7456F1] text-[5vw] lg:text-[1.5vw] font-postnobills text-white py-1 px-2 rounded-md"
-        >
-          
-          Sign Up
-        </button>}
-  
+          {isLoginState ? 'Please wait' : 'Sign Up'}
+        </button>
       </form>
     </div>
   );
