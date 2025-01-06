@@ -56,7 +56,7 @@ const SignupForm = () => {
     try {
       setisLoginState(true);
       // Send form data to the server
-       response = await axios.post('http://localhost:5000/signup', formData);
+       response = await axios.post('https://nxtpie-landing-server.vercel.app/signup', formData);
 
       // Handle success (e.g., show a success message or redirect)
     if(response.status===200){
