@@ -25,7 +25,6 @@ const SignupForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     // Validate first name
     if (!formData.firstName) {
       setError('**First name is required.**');
@@ -55,8 +54,10 @@ const SignupForm = () => {
 
     try {
       setisLoginState(true);
+        response = await axios.post('https://nxtpie-landing-server.vercel.app/signup', formData);
+ 
       // Send form data to the server
-       response = await axios.post('https://nxtpie-landing-server.vercel.app/signup', formData);
+
 
       // Handle success (e.g., show a success message or redirect)
     if(response.status===200){
@@ -64,9 +65,11 @@ const SignupForm = () => {
       setFormData({ firstName: '', lastName: '', email: '' });
       setError('');
       setisLoginState(false);
+
     }else{
       setError(`**${response.data}**`);
       setisLoginState(false);
+
     }
 
     } catch (error) {
@@ -152,7 +155,10 @@ const SignupForm = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-[#7456F1] text-[5vw] lg:text-[1.5vw] font-postnobills text-white py-1 px-2 rounded-md"
+          className={`w-full bg-[#7456F1] text-[5vw] lg:text-[1.5vw] font-postnobills text-white py-1 px-2 rounded-md ${
+            isLoginState ? ' cursor-not-allowed bg-gray-400' : ''
+          }`}
+          disabled={isLoginState}
         >
           {isLoginState ? 'Please wait' : 'Sign Up'}
         </button>
