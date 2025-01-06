@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+/* In your CSS file, e.g., App.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbars in WebKit-based browsers (Chrome, Safari) */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}

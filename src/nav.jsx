@@ -22,11 +22,12 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-[9vw]">
-            {/* <Link to={"#home"}> */}
+           
             <a href="#home" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
               Home
+    
             </a>
-            {/* </Link> */}
+       
             <a href="#features" className="hover:text-[#7456F1] font-thin font-body_font text-[1vw]">
             Features
             </a>

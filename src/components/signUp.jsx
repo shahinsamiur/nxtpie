@@ -78,14 +78,14 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-[20vh] lg:gap-[15vh] items-center min-h-screen bg-[#000101]">
+    <div className="flex flex-col gap-[20vh]  lg:gap-[15vh] items-center min-h-screen bg-[#000101]">
       <div className="w-full">
         <Navbar />
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="lg:bg-[#121212] shadow-md font-body_font rounded px-8 py-6 w-full max-w-md"
+        className="lg:bg-[#121212]  border-[0.01vw] border-[#2f2f2f] shadow-md font-body_font rounded px-8 py-6 w-full max-w-md"
       >
         <h2 className="text-2xl font-bold font-heading text-[#7456F1] text-center mb-2">
           Join Us
